@@ -1,0 +1,98 @@
+/* le pongo el box... para lograr que todas las cajas tengasn el ancho y alto declarado*/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* los 2 estilo que tenemos arriba (html, *, etc) son oara comprementar el *{box-sizing:border-box} ya que este solo puede no funcionar bien */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mt-2 {
+    margin-top: 2rem; /*el margin sera de 32px*/
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 600px; /*logra que si mi tamaño de pantalla es de 700px la caja queda en 600 maximo*/
+    /* background-color: aqua; */
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #264653;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #2a9d8f;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #e76f51;
+}
+
+.btn-info {
+    color: black;
+    background-color: #e9c46a;
+}
+
+.btn-success {
+    color: black;
+    background-color: #f4a261;
+}
+
+.logo {
+    display: block;
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    padding: 1em;/*este 2em logra que el padding siempre sea 3rem * 0.5px. osea:border: el tamaño de la fuente del logo es 16*3=48px; entonces mi padding es 48*0.5=24px*/ 
+    background-color: #264653;
+}
+
+.card {
+    width: 300px;
+    background-color: #2a9d8f;
+    color: white;
+    overflow: hidden; /*para qaue no se desborde el contenido hacia afuera de la clase card*/
+    border-radius: 0.5em;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+.card-body p {
+    font-weight: 300;
+}

@@ -1,0 +1,259 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Utilitarioas */
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bg-header {
+    background-image: url('../assets/images/bg-header-min.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 18.75em;
+    /*nos hace referencia al html (16px) xq es el primer padre con configuracion del font-size*/
+}
+
+.bg-navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5em 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+@media (min-width:768px) {
+    .navbar-brand {
+        flex-direction: row;
+        margin: 0;
+    }
+}
+
+.navbar-brand img {
+    width: 2em;
+}
+
+.navbar-nav {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.3em;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: black;
+    border-radius: 0.5em;
+}
+
+/*    MAIN   */
+.main {
+    margin-top: -2em;
+    background-color: white;
+    padding: 0.3em;
+    border-radius: 0.3em;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*       C A R D          */
+.card {
+    background-color: #A6464E;
+    color: white;
+    overflow: hidden;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.5rem;
+    margin: 1em 0;
+    font-weight: 500;
+}
+
+.card-body p {
+    font-weight: 200;
+}
+
+/* BOTON */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5em;
+    margin: 0 0.1em;
+    border-radius: 0.5em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #214037;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #77A699;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #A6464E;
+}
+
+.btn-info {
+    color: black;
+    background-color: #E2F2C9;
+}
+
+.btn-dark {
+    color: white;
+    background-color: #2F2E2E;
+}
+
+.nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #2F2E2E;
+}
+
+.nosotros-col-img {
+    background-image: url('../assets/images/nosotros-min.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 21.875em;
+    width: 100%;
+    order: 2;
+    /*el tener order 2 y el texto, abajo el 1 primero se vera el text (1) y luego el 2(img)*/
+}
+
+@media (min-width:576px) {
+    .nosotros-col-img {
+        height: 31.25em;
+    }
+}
+
+.nosotros-col-text {
+    order: 1;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width:768px) {
+    .nosotros {
+        flex-direction: row;
+    }
+
+    .nosotros-col-img {
+        order: 1;
+        flex: 1 1 0;
+        /* 
+        grow 1 = dice que ocuoara el mayor espacio disp 
+        shirk 1 = por defecto, se ira modificando
+        basis 0 = va a tener el mismo tamaño que text ya que tiene lo mismo
+        */
+    }
+
+    .nosotros-col-text {
+        order: 2;
+        flex: 1 1 0;
+    }
+}
+
+.nosotros-body h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nosotros-body p {
+    font-weight: 200;
+}
+
+.bg-footer {
+    background-color: #214037;
+    color: white
+}
+
+.bg-footer p {
+    margin: 0;
+    padding: 1em 0;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .tienda {
+        display: flex;
+        gap: 1em;
+        /*gap es para la separacion de los elementos que contiene tienda*/
+    }
+}
+
+/* 
+@media (min-width:768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar-brand {
+        flex-direction: row;
+        margin: 0;
+    }
+}
+*/
