@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Bootstrap</title>
+    <!-- Este es el CDN de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+            <div class="col-1 border">1</div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- <div class="row">
+            <div class="col-4 border">colum d 4 lu</div>
+            <div class="col-4 border">colum d 4 lu</div>
+            <div class="col-4 border">colum d 4 lu</div>
+        </div>
+        <div class="row">
+            <div class="col-6 border">colum de 6 lugares</div>
+            <div class="col-6 border">colum de 6 lugares</div>
+        </div>
+        <div class="row">
+            <div class="col-3 border">colum de 3 lugares</div>
+            <div class="col-6 border">colum de 6 lugares</div>
+            <div class="col-3 border">colum de 3 lugares</div>
+        </div> -->
+        <br>
+        <p>Para hacer la grid responsive usamos las opciones de grid / /xs/sm/md/lg/xl/xxl.
+            Donde como ya vimos que usamos col-numero (col-3) para dar los espacion que usamos ahroa le agregamos
+            col-sm-numeroColum, etc
+        </p>
+        <div class="row">
+            <div class="col-12 col-sm-4 col-lg-6 border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
+                necessitatibus rem ipsum deserunt voluptates. Veritatis odit, saepe obcaecati aspernatur, rerum,
+                consequuntur sapiente aliquid facere ipsa aperiam error officiis! Quod, dignissimos.</div>
+            <div class="col-12 col-sm-4 col-lg-6 border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
+                necessitatibus rem ipsum deserunt voluptates. Veritatis odit, saepe obcaecati aspernatur, rerum,
+                consequuntur sapiente aliquid facere ipsa aperiam error officiis! Quod, dignissimos.</div>
+            <div class="col-12 col-sm-4 col-lg-12 border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
+                necessitatibus rem ipsum deserunt voluptates. Veritatis odit, saepe obcaecati aspernatur, rerum,
+                consequuntur sapiente aliquid facere ipsa aperiam error officiis! Quod, dignissimos.</div>
+        </div>
+
+        <!-- Lo que pasa aca es que cuando tenemos col-12 no especifica opcion, por ende se toma xs, la mas chica.
+    cuando el tamaño de display pasa a ser sm (small == 540px) vamos a tener clase col-sm-6 lo cual indica que los div ocupara 4 lugares cada 1.
+cuando tenemos col-lg-6 los div pasaran a tener 6 lugares, pero tenemos 3 div, por lo que el 3 saltaria a la fila 2 y pora que no quede mal solo a este lo doy 12 lugares y ocupe todo el ancho -->
+
+    </div>
+
+</body>
+
+</html>

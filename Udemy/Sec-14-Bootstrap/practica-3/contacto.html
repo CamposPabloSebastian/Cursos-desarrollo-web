@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Formulario</title>
+
+    <style>
+      .toast {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Contacto</h1>
+      <form action="" id="mi-formulario">
+        <!-- 
+            el for en el label es para relacionar el label con el input
+            aria-describedby="emailHelp" es para relaionar el texto de ayuda con el input
+         -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Ingresa aquí tu email"
+            aria-describedby="emailHelp"
+            require
+            name="emailCampo"
+          />
+          <div class="form-text" id="emailHelp">No compartiremos tu email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="contraseña" class="form-label">Contraseña:</label>
+          <input
+            id="contraseña"
+            type="password"
+            class="form-control"
+            placeholder="Ingresa tu contraseña"
+            require
+            name="passCampo"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="mi-checkbox"
+            name="checkCampo"
+          />
+          <label class="form-check-label" for="mi-checkbox"
+            >Estoy de acuerdo</label
+          >
+        </div>
+        <!-- type submit es para que procese el formulario -->
+        <button class="btn btn-primary w-100" type="submit" id="btn-enviar">
+          Enviar
+        </button>
+
+        <!--
+            * Aca esta el Loading, disable es para desacticvar el boton 
+            * d-none es para que no aparezca el boton, lo hago aparecer con js-->
+        <button
+          class="btn btn-secondary w-100 d-none"
+          type="button"
+          disabled
+          id="btn-cargando"
+        >
+          <span
+            class="spinner-grow spinner-grow-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          Cargando...
+        </button>
+      </form>
+    </div>
+
+    <!-- Este el toast -->
+    <div
+      class="toast align-items-center"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Formulario procesado.</div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
