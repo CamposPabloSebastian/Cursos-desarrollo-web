@@ -1,0 +1,18 @@
+//VARIABLES MODIFICADAS DE BOOTSTRAP
+//traemos el import de google font
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500&display=swap');
+
+$font-family-base: 'Dancing Script', cursive; 
+//copio de node modules el color danger que es rojo y ahora lo pongo de otro color
+
+$danger: indigo;
+
+//IMPORT TRAIGO DE BOOTSTRAP PARA VINCULAR SASS
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+//ESTILOS NUEVOS
+p {
+    color: $yellow-500; //esta nomenclatura de color sale de bootstrap en custom/color
+    background-color: aqua;
+}

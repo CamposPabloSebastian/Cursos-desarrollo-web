@@ -1,0 +1,38 @@
+//importa las fuentes que elegi
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;500;700;900&family=Raleway:wght@100;200;300;400;500&display=swap');
+
+
+//modifico las variables de bootstrap.
+$font-family-base: 'Montserrat', sans-serif;
+$primary: #3cb4ab;
+
+//habilito el margen negativo
+$enable-negative-margins: true;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//MIS ESTILOS
+.nav-form-control{
+    background-color: $primary; //utilizo la variable primary
+    border-color: $light; //light es una variable de de css en bootstrap
+}
+
+header{
+    background-image: url('../img/img-header.jpg');
+    height: 100%;
+    // para centrar img y que no se distorcione
+    background-position: center;
+    background-size: cover;
+    //para que se vea bien en todos los tamaños hago el media query
+}
+
+@include media-breakpoint-up(md) {
+    header{
+        height: 400px;
+    }
+}
+
+//usar el main es valido, pero vamos a isar margenes negaticos de bootstrap
+// main{
+//     margin-top: -50px;
+// }
